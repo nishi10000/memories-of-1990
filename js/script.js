@@ -11,38 +11,41 @@ document.addEventListener('DOMContentLoaded', () => {
     'テクノロジー': 'tech'
   };
 
-  /**
-   * 指定された西暦から、1990年4月生まれの人の年齢と学年を計算して返す
-   * @param {number} year 西暦
-   * @returns {string} 例: "(15歳 / 中学3年)"
-   */
   function getAgeAndGrade(year) {
     const age = year - 1990;
     let gradeString = '';
-
-    // 1990年4月生まれと仮定して学年を計算
     const ageInApril = year - 1990;
     if (ageInApril >= 7 && ageInApril <= 12) {
       gradeString = ` / 小学${ageInApril - 6}年`;
     } else if (ageInApril >= 13 && ageInApril <= 15) {
       gradeString = ` / 中学${ageInApril - 12}年`;
     }
-
     return `(${age}歳${gradeString})`;
   }
 
+  // 文字化け対策を強化したデータ取得処理
   fetch('data/data.json')
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      // レスポンスをバイナリ(ArrayBuffer)として取得
+      return response.arrayBuffer();
+    })
+    .then(buffer => {
+      // ArrayBufferをUTF-8として強制的にデコード
+      const decoder = new TextDecoder('utf-8');
+      const text = decoder.decode(buffer);
+      // デコードしたテキストをJSONとしてパース
+      return JSON.parse(text);
+    })
     .then(data => {
-      // 年表とナビゲーションを生成
       data.forEach((yearData, index) => {
-        // 1. 年別ナビゲーションのリンクを生成
         const navLink = document.createElement('a');
         navLink.href = `#year-${yearData.year}`;
         navLink.textContent = yearData.year;
         yearNav.appendChild(navLink);
 
-        // 2. タイムラインのセクションを生成
         const yearSection = document.createElement('div');
         yearSection.id = `year-${yearData.year}`;
         yearSection.className = `year-section ${index % 2 === 0 ? 'left' : 'right'}`;
@@ -85,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
         timeline.appendChild(yearSection);
       });
 
-      // 3. スムーズスクロールの実装
       document.querySelectorAll('#year-nav a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -95,10 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
 
-      // 4. AOSライブラリを初期化
       AOS.init({
-        duration: 800, // アニメーションの時間
-        once: true,    // アニメーションを1回だけ実行
+        duration: 800,
+        once: true,
       });
     })
     .catch(error => {
