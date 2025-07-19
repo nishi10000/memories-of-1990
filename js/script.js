@@ -9,6 +9,26 @@ document.addEventListener('DOMContentLoaded', () => {
     'ゲーム': 'game'
   };
 
+  /**
+   * 指定された西暦から、1990年4月生まれの人の年齢と学年を計算して返す
+   * @param {number} year 西暦
+   * @returns {string} 例: "(15歳 / 中学3年)"
+   */
+  function getAgeAndGrade(year) {
+    const age = year - 1990;
+    let gradeString = '';
+
+    // 1990年4月生まれと仮定して学年を計算
+    const ageInApril = year - 1990;
+    if (ageInApril >= 7 && ageInApril <= 12) {
+      gradeString = ` / 小学${ageInApril - 6}年`;
+    } else if (ageInApril >= 13 && ageInApril <= 15) {
+      gradeString = ` / 中学${ageInApril - 12}年`;
+    }
+
+    return `(${age}歳${gradeString})`;
+  }
+
   fetch('data/data.json')
     .then(response => response.json())
     .then(data => {
@@ -23,16 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. タイムラインのセクションを生成
         const yearSection = document.createElement('div');
         yearSection.id = `year-${yearData.year}`;
-        // 左右交互にクラスを割り当て
         yearSection.className = `year-section ${index % 2 === 0 ? 'left' : 'right'}`;
-        // AOSアニメーションを設定
         yearSection.setAttribute('data-aos', index % 2 === 0 ? 'fade-right' : 'fade-left');
 
         const yearContent = document.createElement('div');
         yearContent.className = 'year-content';
 
         const yearTitle = document.createElement('h2');
-        yearTitle.textContent = `${yearData.year}年`;
+        const personalInfo = getAgeAndGrade(yearData.year);
+        yearTitle.innerHTML = `${yearData.year}年 <small class="personal-info">${personalInfo}</small>`;
         yearContent.appendChild(yearTitle);
 
         const eventList = document.createElement('ul');
@@ -82,6 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => {
       console.error('データの読み込みに失敗しました:', error);
-      timeline.innerHTML = '<p>年���データの読み込みに失敗しました。</p>';
+      timeline.innerHTML = '<p>年表データの読み込みに失敗しました。</p>';
     });
 });

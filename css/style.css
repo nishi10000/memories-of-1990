@@ -150,6 +150,14 @@ main {
   text-decoration: underline;
 }
 
+.personal-info {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #65676b;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
 /* --- レスポンシブ対応 --- */
 @media screen and (max-width: 768px) {
   #timeline::after {
