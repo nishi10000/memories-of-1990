@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const timeline = document.getElementById('timeline');
+  const yearNav = document.getElementById('year-nav');
 
-  // カテゴリ名とCSSクラスのマッピング
   const categoryClassMap = {
     'ニュース': 'news',
     '音楽': 'music',
@@ -9,61 +9,79 @@ document.addEventListener('DOMContentLoaded', () => {
     'ゲーム': 'game'
   };
 
-  // data.jsonを非同期で読み込む
   fetch('data/data.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('ネットワークの応答が正しくありませんでした。');
-      }
-      return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
-      // 読み込んだデータから年表を生成
-      data.forEach(yearData => {
-        // 各年のコンテナを作成
-        const yearSection = document.createElement('section');
-        yearSection.className = 'year-section';
+      // 年表とナビゲーションを生成
+      data.forEach((yearData, index) => {
+        // 1. 年別ナビゲーションのリンクを生成
+        const navLink = document.createElement('a');
+        navLink.href = `#year-${yearData.year}`;
+        navLink.textContent = yearData.year;
+        yearNav.appendChild(navLink);
 
-        // 年の見出しを作成
+        // 2. タイムラインのセクションを生成
+        const yearSection = document.createElement('div');
+        yearSection.id = `year-${yearData.year}`;
+        // 左右交互にクラスを割り当て
+        yearSection.className = `year-section ${index % 2 === 0 ? 'left' : 'right'}`;
+        // AOSアニメーションを設定
+        yearSection.setAttribute('data-aos', index % 2 === 0 ? 'fade-right' : 'fade-left');
+
+        const yearContent = document.createElement('div');
+        yearContent.className = 'year-content';
+
         const yearTitle = document.createElement('h2');
         yearTitle.textContent = `${yearData.year}年`;
-        yearSection.appendChild(yearTitle);
+        yearContent.appendChild(yearTitle);
 
-        // イベントリストのコンテナを作成
         const eventList = document.createElement('ul');
         eventList.className = 'event-list';
 
-        // 各イベントをリストアイテムとして追加
         yearData.events.forEach(eventData => {
           const eventItem = document.createElement('li');
           eventItem.className = 'event-item';
 
-          // カテゴリ
           const categorySpan = document.createElement('span');
           const categoryClassName = categoryClassMap[eventData.category] || 'default';
           categorySpan.className = `category category-${categoryClassName}`;
           categorySpan.textContent = eventData.category;
 
-          // タイトルをWikipediaへのリンクに変更
           const titleLink = document.createElement('a');
           titleLink.className = 'title';
           titleLink.textContent = eventData.title;
-          // 日本語版Wikipediaの検索ページURLを生成
           titleLink.href = `https://ja.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(eventData.title)}`;
-          titleLink.target = '_blank'; // 新しいタブで開く
-          titleLink.rel = 'noopener noreferrer'; // セキュリティ対策
+          titleLink.target = '_blank';
+          titleLink.rel = 'noopener noreferrer';
 
           eventItem.appendChild(categorySpan);
           eventItem.appendChild(titleLink);
           eventList.appendChild(eventItem);
         });
 
-        yearSection.appendChild(eventList);
+        yearContent.appendChild(eventList);
+        yearSection.appendChild(yearContent);
         timeline.appendChild(yearSection);
+      });
+
+      // 3. スムーズスクロールの実装
+      document.querySelectorAll('#year-nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // 4. AOSライブラリを初期化
+      AOS.init({
+        duration: 800, // アニメーションの時間
+        once: true,    // アニメーションを1回だけ実行
       });
     })
     .catch(error => {
       console.error('データの読み込みに失敗しました:', error);
-      timeline.innerHTML = '<p>年表データの読み込みに失敗しました。ページを再読み込みしてみてください。</p>';
+      timeline.innerHTML = '<p>年���データの読み込みに失敗しました。</p>';
     });
 });

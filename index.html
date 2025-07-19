@@ -4,17 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>1990年生まれのメモリーズ</title>
+  <!-- AOS (Animate On Scroll) Library CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>1990年生まれのメモリーズ</h1>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>1990年生まれのメモリーズ</h1>
+      <p>あの頃の出来事を、もう一度。</p>
+    </div>
   </header>
+
+  <nav id="year-nav"></nav>
+
   <main>
-    <div id="timeline-container">
-      <div id="timeline"></div>
+    <div id="timeline">
+      <!-- 年表はJavaScriptによってここに動的に生成されます -->
     </div>
   </main>
+
+  <!-- AOS (Animate On Scroll) Library JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
