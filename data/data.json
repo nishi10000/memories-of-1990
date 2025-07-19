@@ -1,0 +1,75 @@
+[
+  {
+    "year": 1990,
+    "events": [
+      { "category": "ニュース", "title": "大学入試センター試験開始" },
+      { "category": "ニュース", "title": "東西ドイツ統一" },
+      { "category": "音楽", "title": "B.B.クィーンズ「おどるポンポコリン」が年間1位" },
+      { "category": "音楽", "title": "米米CLUB「浪漫飛行」が大ヒット" },
+      { "category": "エンタメ", "title": "アニメ「ちびまる子ちゃん」放送開始" },
+      { "category": "ゲーム", "title": "任天堂「スーパーファミコン」発売" },
+      { "category": "ゲーム", "title": "スクウェア「ドラゴンクエストIV 導かれし者たち」発売" }
+    ]
+  },
+  {
+    "year": 1991,
+    "events": [
+      { "category": "ニュース", "title": "湾岸戦争勃発" },
+      { "category": "ニュース", "title": "ソビエト連邦の崩��" },
+      { "category": "音楽", "title": "CHAGE&ASKA「SAY YES」が大ヒット" },
+      { "category": "音楽", "title": "小田和正「ラブ・ストーリーは突然に」が大ヒット" },
+      { "category": "エンタメ", "title": "ドラマ「東京ラブストーリー」放送" },
+      { "category": "エンタメ", "title": "宮沢りえの写真集「Santa Fe」がベストセラー" },
+      { "category": "ゲーム", "title": "カプコン「ストリートファイターII」稼働開始" },
+      { "category": "ゲーム", "title": "スクウェア「ファイナルファンタジーIV」発売" }
+    ]
+  },
+  {
+    "year": 1992,
+    "events": [
+      { "category": "ニュース", "title": "毛利衛さん、宇宙へ" },
+      { "category": "ニュース", "title": "東海道新幹線「のぞみ」運転開始" },
+      { "category": "音楽", "title": "米米CLUB「君がいるだけで」が年間1位" },
+      { "category": "音楽", "title": "尾崎豊さん死去" },
+      { "category": "エンタメ", "title": "アニメ「美��女戦士セーラームーン」放送開始" },
+      { "category": "エンタメ", "title": "ドラマ「ずっとあなたが好きだった」放送" },
+      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストV 天空の花嫁」発売" },
+      { "category": "ゲーム", "title": "任天堂「スーパーマリオカート」発売" }
+    ]
+  },
+  {
+    "year": 1993,
+    "events": [
+      { "category": "ニュース", "title": "Jリーグ開幕" },
+      { "category": "ニュース", "title": "皇太子さまと雅子さまがご成婚" },
+      { "category": "音楽", "title": "CHAGE and ASKA「YAH YAH YAH」が年間1位" },
+      { "category": "音楽", "title": "THE 虎舞竜「ロード」が大ヒット" },
+      { "category": "エンタメ", "title": "映画「ジュラシック・パーク」公開" },
+      { "category": "ゲーム", "title": "スクウェア「聖剣伝説2」発売" }
+    ]
+  },
+  {
+    "year": 1994,
+    "events": [
+      { "category": "ニュース", "title": "松本サリン事件発生" },
+      { "category": "ニュース", "title": "関西国際空港開港" },
+      { "category": "音楽", "title": "Mr.Children「innocent world」が年間1位" },
+      { "category": "音楽", "title": "篠原涼子「恋しさと せつなさと 心強さと」が大ヒット" },
+      { "category": "エンタメ", "title": "ドラマ「家なき子」が大ヒット" },
+      { "category": "ゲーム", "title": "ソニー「PlayStation」発売" },
+      { "category": "ゲーム", "title": "セガ「セガサターン」発売" }
+    ]
+  },
+  {
+    "year": 1995,
+    "events": [
+      { "category": "ニュース", "title": "阪神・淡路大震災発生" },
+      { "category": "ニュース", "title": "地下鉄サリン事件発生" },
+      { "category": "ニュース", "title": "Microsoft「Windows 95」発売" },
+      { "category": "音楽", "title": "DREAMS COME TRUE「LOVE LOVE LOVE」が年間1位" },
+      { "category": "エンタメ", "title": "アニメ「新世紀エヴァンゲリオン」放送開始" },
+      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストVI 幻の大地」発売" },
+      { "category": "ゲーム", "title": "スクウェア「クロノ・トリガー」発売" }
+    ]
+  }
+]

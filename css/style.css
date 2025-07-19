@@ -1,0 +1,112 @@
+/* 基本スタイル */
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 1rem;
+}
+
+/* 横スクロールのタイムライン */
+#timeline-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap; /* 子要素の折り返しを防ぐ */
+  -webkit-overflow-scrolling: touch; /* iOSでの慣性スクロール */
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+#timeline {
+  display: flex; /* 年セクションを横並びにする */
+  padding: 1rem;
+}
+
+/* 各年のセクション */
+.year-section {
+  flex: 0 0 300px; /* 幅を300pxに固定 */
+  margin-right: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  white-space: normal; /* セクション内のテキストは折り返す */
+}
+
+.year-section:last-child {
+  margin-right: 0;
+}
+
+.year-section h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+/* イベントリスト */
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-item {
+  margin-bottom: 0.75rem;
+}
+
+.event-item .category {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+/* カテゴリ別の色分け */
+.category-news { background-color: #2196F3; } /* 青 */
+.category-music { background-color: #4CAF50; } /* 緑 */
+.category-entertainment { background-color: #FF9800; } /* オレンジ */
+.category-game { background-color: #9C27B0; } /* 紫 */
+
+.event-item .title {
+  font-size: 1rem;
+}
+
+/* レスポンシブ対応: 画面幅が768px以下の場合 */
+@media (max-width: 768px) {
+  #timeline-container {
+    overflow-x: visible; /* 横スクロールを無効化 */
+    white-space: normal;
+    border: none;
+    background-color: transparent;
+  }
+
+  #timeline {
+    display: block; /* 縦積みに変更 */
+    padding: 0;
+  }
+
+  .year-section {
+    flex: none; /* flex設定をリセット */
+    width: auto; /* 幅を自動に */
+    margin-right: 0;
+    margin-bottom: 1rem; /* 下にマージンを追加 */
+  }
+}
