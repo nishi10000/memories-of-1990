@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'ニュース': 'news',
     '音楽': 'music',
     'エンタメ': 'entertainment',
-    'ゲーム': 'game'
+    'ゲーム': 'game',
+    '流行・ファッション': 'fashion',
+    'テクノロジー': 'tech'
   };
 
   /**

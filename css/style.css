@@ -136,9 +136,12 @@ main {
   margin-bottom: 0.4rem;
 }
 .category-news { background-color: #1877f2; }
-.category-music { background-color: #1db954; }
-.category-entertainment { background-color: #ffc107; }
-.category-game { background-color: #7289da; }
+.category-music { background-color: #1db954; } /* Spotify Green */
+.category-entertainment { background-color: #ffc107; } /* Amber */
+.category-game { background-color: #7289da; } /* Discord Purple */
+.category-fashion { background-color: #f43f5e; } /* Rose 500 */
+.category-tech { background-color: #3b82f6; } /* Blue 500 */
+
 .title {
   display: block;
   color: #1c1e21;
