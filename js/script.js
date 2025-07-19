@@ -40,18 +40,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
           // カテゴリ
           const categorySpan = document.createElement('span');
-          const categoryKey = eventData.category.replace(' ', '-').toLowerCase();
           const categoryClassName = categoryClassMap[eventData.category] || 'default';
           categorySpan.className = `category category-${categoryClassName}`;
           categorySpan.textContent = eventData.category;
 
-          // タイトル
-          const titleP = document.createElement('p');
-          titleP.className = 'title';
-          titleP.textContent = eventData.title;
+          // タイトルをWikipediaへのリンクに変更
+          const titleLink = document.createElement('a');
+          titleLink.className = 'title';
+          titleLink.textContent = eventData.title;
+          // 日本語版Wikipediaの検索ページURLを生成
+          titleLink.href = `https://ja.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(eventData.title)}`;
+          titleLink.target = '_blank'; // 新しいタブで開く
+          titleLink.rel = 'noopener noreferrer'; // セキュリティ対策
 
           eventItem.appendChild(categorySpan);
-          eventItem.appendChild(titleP);
+          eventItem.appendChild(titleLink);
           eventList.appendChild(eventItem);
         });
 
