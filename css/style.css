@@ -87,9 +87,7 @@ main {
   position: relative;
   background-color: inherit;
   width: 50%;
-  scroll-snap-align: start;
-  padding-top: 4rem; /* スナップ位置の微調整 */
-  margin-top: -4rem; /* ネガティブマージンでパディング分を相殺 */
+  /* スクロールスナップはカテゴリ単位に移動 */
 }
 
 /* 左右交互に配置 */
@@ -147,10 +145,16 @@ main {
 .year-content h2 {
   margin-top: 0;
   color: #1877f2;
+  scroll-snap-align: start; /* 年のタイトルもスナップ対象に */
+  padding-top: 5rem;
+  margin-top: -4rem;
 }
 
 .category-group {
   margin-top: 1.5rem;
+  scroll-snap-align: start; /* カテゴリグループをスナップ対象に */
+  padding-top: 5rem; /* スティッキーヘッダーの高さを考慮 */
+  margin-top: -4rem; /* パディング相殺用のネガティブマージン */
 }
 .category-group:first-of-type {
   margin-top: 1rem;
@@ -208,13 +212,31 @@ main {
 
 /* --- レスポンシブ対応 --- */
 @media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  #year-nav {
+    padding: 0.25rem 0.5rem;
+  }
+  #year-nav a {
+    padding: 0.4rem 0.8rem;
+  }
+  main {
+    padding: 1rem;
+  }
   #timeline::after {
     left: 31px;
   }
   .year-section {
     width: 100%;
     padding-left: 70px;
-    padding-right: 25px;
+    padding-right: 15px;
+  }
+  .year-content {
+    padding: 15px 20px;
   }
   .year-section.right {
     left: 0%;
