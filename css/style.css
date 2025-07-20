@@ -172,12 +172,33 @@ main {
   border-left: 3px solid #eee;
 }
 .event-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 0.5rem;
   padding-left: 0.5rem;
 }
 .event-item:last-child {
   margin-bottom: 0;
 }
+
+.event-category-tag {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+}
+
+/* カテゴリタグの色 */
+.event-item.category-news .event-category-tag { background-color: #1877f2; }
+.event-item.category-music .event-category-tag { background-color: #1db954; }
+.event-item.category-entertainment .event-category-tag { background-color: #ffc107; }
+.event-item.category-game .event-category-tag { background-color: #7289da; }
+.event-item.category-fashion .event-category-tag { background-color: #f43f5e; }
+.event-item.category-tech .event-category-tag { background-color: #3b82f6; }
+.event-item.category-default .event-category-tag { background-color: #65676b; }
 
 .category-news { background-color: #1877f2; }
 .category-music { background-color: #1db954; } /* Spotify Green */

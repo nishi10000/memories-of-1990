@@ -59,63 +59,49 @@ document.addEventListener('DOMContentLoaded', () => {
         yearTitle.innerHTML = `${yearData.year}年 <small class="personal-info">${personalInfo}</small>`;
         yearContent.appendChild(yearTitle);
 
-        // イベントをカテゴリごとにグループ化
-        const eventsByCategory = yearData.events.reduce((acc, event) => {
-          const category = event.category;
-          if (!acc[category]) {
-            acc[category] = [];
+        // イベントをカテゴリ分けせず、JSONの順序で直接リスト表示
+        const eventList = document.createElement('ul');
+        eventList.className = 'event-list';
+
+        yearData.events.forEach(eventData => {
+          const eventItem = document.createElement('li');
+          // カテゴリ情報をクラスとして付与
+          const categoryClassName = categoryClassMap[eventData.category] || 'default';
+          eventItem.className = `event-item category-${categoryClassName}`;
+
+          // カテゴリ名をタグとして表示
+          const categoryTag = document.createElement('span');
+          categoryTag.className = 'event-category-tag';
+          categoryTag.textContent = eventData.category;
+          eventItem.appendChild(categoryTag);
+
+          const titleLink = document.createElement('a');
+          titleLink.className = 'title';
+          titleLink.textContent = eventData.title;
+          titleLink.href = `https://ja.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(eventData.title)}`;
+          titleLink.target = '_blank';
+          titleLink.rel = 'noopener noreferrer';
+
+          eventItem.appendChild(titleLink);
+
+          // 背景画像用のイベントリスナーを追加
+          if (eventData.imageUrl) {
+            eventItem.addEventListener('mouseenter', () => {
+              const yearContent = eventItem.closest('.year-content');
+              yearContent.style.backgroundImage = `url(${eventData.imageUrl})`;
+              yearContent.classList.add('has-bg-image');
+            });
+
+            eventItem.addEventListener('mouseleave', () => {
+              const yearContent = eventItem.closest('.year-content');
+              yearContent.style.backgroundImage = 'none';
+              yearContent.classList.remove('has-bg-image');
+            });
           }
-          acc[category].push(event);
-          return acc;
-        }, {});
+          eventList.appendChild(eventItem);
+        });
 
-        // カテゴリごと（順不同）にリストを生成
-        for (const category in eventsByCategory) {
-          const categoryGroup = document.createElement('div');
-          categoryGroup.className = 'category-group';
-
-          const categoryTitle = document.createElement('h3');
-          const categoryClassName = categoryClassMap[category] || 'default';
-          categoryTitle.className = `category-title category-${categoryClassName}`;
-          categoryTitle.textContent = category;
-          categoryGroup.appendChild(categoryTitle);
-
-          const eventList = document.createElement('ul');
-          eventList.className = 'event-list';
-
-          eventsByCategory[category].forEach(eventData => {
-            const eventItem = document.createElement('li');
-            eventItem.className = 'event-item';
-
-            const titleLink = document.createElement('a');
-            titleLink.className = 'title';
-            titleLink.textContent = eventData.title;
-            titleLink.href = `https://ja.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(eventData.title)}`;
-            titleLink.target = '_blank';
-            titleLink.rel = 'noopener noreferrer';
-
-            eventItem.appendChild(titleLink);
-            eventList.appendChild(eventItem);
-
-            // 背景画像用のイベントリスナーを追加
-            if (eventData.imageUrl) {
-              eventItem.addEventListener('mouseenter', () => {
-                const yearContent = eventItem.closest('.year-content');
-                yearContent.style.backgroundImage = `url(${eventData.imageUrl})`;
-                yearContent.classList.add('has-bg-image');
-              });
-
-              eventItem.addEventListener('mouseleave', () => {
-                const yearContent = eventItem.closest('.year-content');
-                yearContent.style.backgroundImage = 'none';
-                yearContent.classList.remove('has-bg-image');
-              });
-            }
-          });
-
-          categoryGroup.appendChild(eventList);
-          yearContent.appendChild(categoryGroup);
-        }
+        yearContent.appendChild(eventList);
 
         // --- ▼▼▼ 思い出投稿機能 ▼▼▼ ---
 
