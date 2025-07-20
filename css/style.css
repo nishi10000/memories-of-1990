@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 60px; /* スティッキーヘッダーの高さを考慮 */
 }
 
 /* --- 基本スタイル --- */
@@ -87,7 +88,7 @@ main {
   position: relative;
   background-color: inherit;
   width: 50%;
-  /* スクロールスナップはカテゴリ単位に移動 */
+  scroll-snap-align: start;
 }
 
 /* 左右交互に配置 */
@@ -145,16 +146,10 @@ main {
 .year-content h2 {
   margin-top: 0;
   color: #1877f2;
-  scroll-snap-align: start; /* 年のタイトルもスナップ対象に */
-  padding-top: 5rem;
-  margin-top: -4rem;
 }
 
 .category-group {
   margin-top: 1.5rem;
-  scroll-snap-align: start; /* カテゴリグループをスナップ対象に */
-  padding-top: 5rem; /* スティッキーヘッダーの高さを考慮 */
-  margin-top: -4rem; /* パディング相殺用のネガティブマージン */
 }
 .category-group:first-of-type {
   margin-top: 1rem;
