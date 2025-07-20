@@ -5,8 +5,8 @@
       { "category": "ニュース", "title": "大学入試センター試験開始" },
       { "category": "ニュース", "title": "東西ドイツ統一" },
       { "category": "音楽", "title": "B.B.クィーンズ「おどるポンポコリン」が年間1位" },
-      { "category": "エンタメ", "title": "アニメ「ちびまる子ちゃん」放送開始" },
-      { "category": "ゲーム", "title": "任天堂「スーパーファミコン」発売" }
+      { "category": "エンタメ", "title": "アニメ「ちびまる子ちゃん」放送開始", "imageUrl": "https://placehold.jp/400x300.png?text=Maruko" },
+      { "category": "ゲーム", "title": "任天堂「スーパーファミコン」発売", "imageUrl": "https://placehold.jp/400x300.png?text=SFC" }
     ]
   },
   {

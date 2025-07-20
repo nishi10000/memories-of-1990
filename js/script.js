@@ -96,6 +96,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             eventItem.appendChild(titleLink);
             eventList.appendChild(eventItem);
+
+            // 背景画像用のイベントリスナーを追加
+            if (eventData.imageUrl) {
+              eventItem.addEventListener('mouseenter', () => {
+                const yearContent = eventItem.closest('.year-content');
+                yearContent.style.backgroundImage = `url(${eventData.imageUrl})`;
+                yearContent.classList.add('has-bg-image');
+              });
+
+              eventItem.addEventListener('mouseleave', () => {
+                const yearContent = eventItem.closest('.year-content');
+                yearContent.style.backgroundImage = 'none';
+                yearContent.classList.remove('has-bg-image');
+              });
+            }
           });
 
           categoryGroup.appendChild(eventList);

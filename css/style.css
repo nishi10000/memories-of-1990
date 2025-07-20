@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 /* --- 基本スタイル --- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
@@ -15,6 +19,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 4rem 2rem;
+  scroll-snap-align: start;
 }
 .hero h1 {
   font-size: 2.5rem;
@@ -82,6 +87,9 @@ main {
   position: relative;
   background-color: inherit;
   width: 50%;
+  scroll-snap-align: start;
+  padding-top: 4rem; /* スナップ位置の微調整 */
+  margin-top: -4rem; /* ネガティブマージンでパディング分を相殺 */
 }
 
 /* 左右交互に配置 */
@@ -116,6 +124,24 @@ main {
   position: relative;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease;
+  overflow: hidden; /* ::before 疑似要素がはみ出さないように */
+  z-index: 1; /* 重なり順を制御 */
+}
+
+/* 背景画像表示時のオーバーレイ */
+.year-content.has-bg-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* 白いオーバーレイ */
+  z-index: -1; /* コンテンツの背面に配置 */
+  transition: background-color 0.3s ease;
 }
 
 .year-content h2 {
