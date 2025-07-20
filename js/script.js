@@ -59,31 +59,49 @@ document.addEventListener('DOMContentLoaded', () => {
         yearTitle.innerHTML = `${yearData.year}年 <small class="personal-info">${personalInfo}</small>`;
         yearContent.appendChild(yearTitle);
 
-        const eventList = document.createElement('ul');
-        eventList.className = 'event-list';
+        // イベントをカテゴリごとにグループ化
+        const eventsByCategory = yearData.events.reduce((acc, event) => {
+          const category = event.category;
+          if (!acc[category]) {
+            acc[category] = [];
+          }
+          acc[category].push(event);
+          return acc;
+        }, {});
 
-        yearData.events.forEach(eventData => {
-          const eventItem = document.createElement('li');
-          eventItem.className = 'event-item';
+        // カテゴリごと（順不同）にリストを生成
+        for (const category in eventsByCategory) {
+          const categoryGroup = document.createElement('div');
+          categoryGroup.className = 'category-group';
 
-          const categorySpan = document.createElement('span');
-          const categoryClassName = categoryClassMap[eventData.category] || 'default';
-          categorySpan.className = `category category-${categoryClassName}`;
-          categorySpan.textContent = eventData.category;
+          const categoryTitle = document.createElement('h3');
+          const categoryClassName = categoryClassMap[category] || 'default';
+          categoryTitle.className = `category-title category-${categoryClassName}`;
+          categoryTitle.textContent = category;
+          categoryGroup.appendChild(categoryTitle);
 
-          const titleLink = document.createElement('a');
-          titleLink.className = 'title';
-          titleLink.textContent = eventData.title;
-          titleLink.href = `https://ja.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(eventData.title)}`;
-          titleLink.target = '_blank';
-          titleLink.rel = 'noopener noreferrer';
+          const eventList = document.createElement('ul');
+          eventList.className = 'event-list';
 
-          eventItem.appendChild(categorySpan);
-          eventItem.appendChild(titleLink);
-          eventList.appendChild(eventItem);
-        });
+          eventsByCategory[category].forEach(eventData => {
+            const eventItem = document.createElement('li');
+            eventItem.className = 'event-item';
 
-        yearContent.appendChild(eventList);
+            const titleLink = document.createElement('a');
+            titleLink.className = 'title';
+            titleLink.textContent = eventData.title;
+            titleLink.href = `https://ja.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(eventData.title)}`;
+            titleLink.target = '_blank';
+            titleLink.rel = 'noopener noreferrer';
+
+            eventItem.appendChild(titleLink);
+            eventList.appendChild(eventItem);
+          });
+
+          categoryGroup.appendChild(eventList);
+          yearContent.appendChild(categoryGroup);
+        }
+
         yearSection.appendChild(yearContent);
         timeline.appendChild(yearSection);
       });

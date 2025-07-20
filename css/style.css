@@ -123,18 +123,38 @@ main {
   color: #1877f2;
 }
 
-.event-list { list-style: none; padding: 0; margin: 0; }
-.event-item { margin-bottom: 1rem; }
-.event-item:last-child { margin-bottom: 0; }
-.category {
+.category-group {
+  margin-top: 1.5rem;
+}
+.category-group:first-of-type {
+  margin-top: 1rem;
+}
+
+.category-title {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
-  padding: 0.3rem 0.6rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 4px;
   color: #fff;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
 }
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 0.5rem;
+  border-left: 3px solid #eee;
+}
+.event-item {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+.event-item:last-child {
+  margin-bottom: 0;
+}
+
 .category-news { background-color: #1877f2; }
 .category-music { background-color: #1db954; } /* Spotify Green */
 .category-entertainment { background-color: #ffc107; } /* Amber */
@@ -143,7 +163,6 @@ main {
 .category-tech { background-color: #3b82f6; } /* Blue 500 */
 
 .title {
-  display: block;
   color: #1c1e21;
   text-decoration: none;
   transition: color 0.2s;
