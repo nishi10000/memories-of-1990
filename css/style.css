@@ -20,7 +20,6 @@ body {
   color: #fff;
   text-align: center;
   padding: 4rem 2rem;
-  scroll-snap-align: start;
 }
 .hero h1 {
   font-size: 2.5rem;
