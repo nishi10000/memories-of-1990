@@ -7,32 +7,34 @@ html {
 
 /* --- 基本スタイル --- */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  font-family: 'Noto Serif JP', serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f2f5;
-  color: #1c1e21;
+  background-color: #fdfaf4; /* 少し黄ばんだクリーム色 */
+  color: #5c4033; /* ダークブラウン */
 }
 
 /* --- ヒーローセクション --- */
 .hero {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: #fff;
+  background: #8c7853; /* 落ち着いた茶色 */
+  color: #fdfaf4;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
+  border-bottom: 5px solid #7a6848;
 }
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
   margin: 0;
 }
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0.5rem 0 0;
 }
 
 /* --- 年別ナビゲーション --- */
 #year-nav {
-  background-color: #fff;
+  background-color: #e9e4d9;
   padding: 0.5rem 1rem;
   text-align: center;
   position: sticky;
@@ -41,10 +43,11 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   white-space: nowrap;
   overflow-x: auto;
+  border-bottom: 2px solid #dcd6c8;
 }
 #year-nav a {
   display: inline-block;
-  color: #1877f2;
+  color: #5c4033;
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -52,7 +55,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 #year-nav a:hover, #year-nav a.active {
-  background-color: #1877f2;
+  background-color: #8c7853;
   color: #fff;
 }
 
@@ -72,13 +75,12 @@ main {
 #timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 4px;
+  background-color: #dcd6c8;
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  margin-left: -2px;
 }
 
 /* 年のセクション（カード） */
@@ -102,26 +104,27 @@ main {
 .year-section::after {
   content: '';
   position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #1877f2;
+  width: 20px;
+  height: 20px;
+  right: -14px;
+  background-color: #fdfaf4;
+  border: 4px solid #8c7853;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
 }
 .year-section.right::after {
-  left: -16px;
+  left: -14px;
 }
 
 /* カードのコンテンツ部分 */
 .year-content {
   padding: 20px 30px;
-  background-color: white;
+  background-color: #fff;
   position: relative;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #e0dace;
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
@@ -137,31 +140,16 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.85); /* 白いオーバーレイ */
+  background-color: rgba(253, 250, 244, 0.85); /* セピア調のオーバーレイ */
   z-index: -1; /* コンテンツの背面に配置 */
   transition: background-color 0.3s ease;
 }
 
 .year-content h2 {
   margin-top: 0;
-  color: #1877f2;
-}
-
-.category-group {
-  margin-top: 1.5rem;
-}
-.category-group:first-of-type {
-  margin-top: 1rem;
-}
-
-.category-title {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  color: #fff;
-  margin-bottom: 0.8rem;
+  color: #8c7853;
+  border-bottom: 2px solid #e9e4d9;
+  padding-bottom: 0.5rem;
 }
 
 .event-list {
@@ -169,7 +157,7 @@ main {
   padding: 0;
   margin: 0;
   padding-left: 0.5rem;
-  border-left: 3px solid #eee;
+  border-left: 3px solid #e9e4d9;
 }
 .event-item {
   display: flex;
@@ -192,35 +180,28 @@ main {
 }
 
 /* カテゴリタグの色 */
-.event-item.category-news .event-category-tag { background-color: #1877f2; }
-.event-item.category-music .event-category-tag { background-color: #1db954; }
-.event-item.category-entertainment .event-category-tag { background-color: #ffc107; }
-.event-item.category-game .event-category-tag { background-color: #7289da; }
-.event-item.category-fashion .event-category-tag { background-color: #f43f5e; }
-.event-item.category-tech .event-category-tag { background-color: #3b82f6; }
-.event-item.category-default .event-category-tag { background-color: #65676b; }
-
-.category-news { background-color: #1877f2; }
-.category-music { background-color: #1db954; } /* Spotify Green */
-.category-entertainment { background-color: #ffc107; } /* Amber */
-.category-game { background-color: #7289da; } /* Discord Purple */
-.category-fashion { background-color: #f43f5e; } /* Rose 500 */
-.category-tech { background-color: #3b82f6; } /* Blue 500 */
+.event-item.category-news .event-category-tag { background-color: #6a5acd; } /* SlateBlue */
+.event-item.category-music .event-category-tag { background-color: #b8860b; } /* DarkGoldenRod */
+.event-item.category-entertainment .event-category-tag { background-color: #cd5c5c; } /* IndianRed */
+.event-item.category-game .event-category-tag { background-color: #4682b4; } /* SteelBlue */
+.event-item.category-fashion .event-category-tag { background-color: #8fbc8f; } /* DarkSeaGreen */
+.event-item.category-tech .event-category-tag { background-color: #a0522d; } /* Sienna */
+.event-item.category-default .event-category-tag { background-color: #708090; } /* SlateGray */
 
 .title {
-  color: #1c1e21;
+  color: #5c4033;
   text-decoration: none;
   transition: color 0.2s;
 }
 .title:hover {
-  color: #1877f2;
+  color: #8c7853;
   text-decoration: underline;
 }
 
 .personal-info {
   font-size: 1rem;
   font-weight: normal;
-  color: #65676b;
+  color: #8c7853;
   margin-left: 0.5rem;
   vertical-align: middle;
 }
@@ -265,11 +246,11 @@ main {
 .memory-section {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #e0dace;
 }
 .memory-section-title {
   font-size: 1.1rem;
-  color: #333;
+  color: #5c4033;
   margin-bottom: 1rem;
 }
 .memory-list {
@@ -278,19 +259,19 @@ main {
   margin: 0;
 }
 .memory-item {
-  background-color: #f7f7f7;
+  background-color: #f7f5f0;
   border-radius: 6px;
   padding: 0.8rem 1rem;
   margin-bottom: 0.5rem;
-  border-left: 4px solid #1877f2;
+  border-left: 4px solid #8c7853;
 }
 .memory-item-nickname {
-  color: #1877f2;
+  color: #8c7853;
   margin-right: 0.5rem;
 }
 
 .add-memory-btn {
-  background-color: #1877f2;
+  background-color: #8c7853;
   color: white;
   border: none;
   border-radius: 8px;
@@ -304,7 +285,7 @@ main {
   transition: background-color 0.3s;
 }
 .add-memory-btn:hover {
-  background-color: #166fe5;
+  background-color: #7a6848;
 }
 
 .memory-form {
@@ -317,18 +298,20 @@ main {
 .memory-form textarea {
   width: 100%;
   padding: 0.6rem;
-  border: 1px solid #ccc;
+  border: 1px solid #dcd6c8;
   border-radius: 6px;
   font-family: inherit;
   font-size: 0.9rem;
   box-sizing: border-box;
+  background-color: #fff;
+  color: #5c4033;
 }
 .memory-form textarea {
   min-height: 60px;
   resize: vertical;
 }
 .memory-form button {
-  background-color: #1db954;
+  background-color: #b8860b;
   color: white;
   border: none;
   border-radius: 6px;
@@ -338,5 +321,5 @@ main {
   align-self: flex-end;
 }
 .memory-form button:hover {
-  background-color: #1aa34a;
+  background-color: #a3760a;
 }
