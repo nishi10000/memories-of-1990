@@ -240,3 +240,83 @@ main {
     left: 15px;
   }
 }
+
+/* --- 思い出投稿機能 --- */
+.memory-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+.memory-section-title {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.memory-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.memory-item {
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #1877f2;
+}
+.memory-item-nickname {
+  color: #1877f2;
+  margin-right: 0.5rem;
+}
+
+.add-memory-btn {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s;
+}
+.add-memory-btn:hover {
+  background-color: #166fe5;
+}
+
+.memory-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.memory-form input,
+.memory-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+.memory-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+.memory-form button {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.memory-form button:hover {
+  background-color: #1aa34a;
+}
