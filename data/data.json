@@ -65,6 +65,77 @@
     ]
   },
   {
+    "year": 1996,
+    "events": [
+      { "category": "ニュース", "title": "病原性大腸菌O-157の集団食中毒が多発" },
+      { "category": "音楽", "title": "PUFFY「アジアの純真」でデビュー", "youtubeUrl": "https://www.youtube.com/results?search_query=PUFFY+アジアの純真" },
+      { "category": "エンタメ", "title": "ドラマ「ロングバケーション」が大ヒット" },
+      { "category": "ゲーム", "title": "任天堂「ニンテンドー64」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/N64-Console-Set.jpg/320px-N64-Console-Set.jpg" },
+      { "category": "ゲーム", "title": "「ポケットモンスター 赤・緑」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Pok%C3%A9mon_Red_and_Blue_box_art.jpg/220px-Pok%C3%A9mon_Red_and_Blue_box_art.jpg" },
+      { "category": "流行語", "title": "アムラー" }
+    ]
+  },
+  {
+    "year": 1997,
+    "events": [
+      { "category": "ニュース", "title": "消費税が3%から5%に引き上げ" },
+      { "category": "音楽", "title": "GLAY「HOWEVER」が大ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=GLAY+HOWEVER" },
+      { "category": "映画", "title": "スタジオジブリ「もののけ姫」公開", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/2/25/Princess_Mononoke_Japanese_poster.png/220px-Princess_Mononoke_Japanese_poster.png" },
+      { "category": "ゲーム", "title": "スクウェア「ファイナルファンタジーVII」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Final_Fantasy_VII_box_art.jpg/220px-Final_Fantasy_VII_box_art.jpg" },
+      { "category": "流行語", "title": "失楽園（する）" }
+    ]
+  },
+  {
+    "year": 1998,
+    "events": [
+      { "category": "スポーツ", "title": "長野冬季オリンピック開催" },
+      { "category": "音楽", "title": "SMAP「夜空ノムコウ」が大ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=SMAP+夜空ノムコウ" },
+      { "category": "映画", "title": "「タイタニック」が日本で公開" },
+      { "category": "ゲーム", "title": "任天堂「ゼルダの伝説 時のオカリナ」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/57/The_Legend_of_Zelda_Ocarina_of_Time_box_art.png/220px-The_Legend_of_Zelda_Ocarina_of_Time_box_art.png" },
+      { "category": "流行語", "title": "ハマの大魔神" }
+    ]
+  },
+  {
+    "year": 1999,
+    "events": [
+      { "category": "ニュース", "title": "東海村JCO臨界事故" },
+      { "category": "音楽", "title": "宇多田ヒカルのアルバム「First Love」が記録的ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=宇多田ヒカル+First+Love" },
+      { "category": "エンタメ", "title": "「だんご3兄弟」が社会現象に" },
+      { "category": "テクノロジー", "title": "NTTドコモ「iモード」サービス開始", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/DoCoMo_logo.svg/200px-DoCoMo_logo.svg.png" },
+      { "category": "流行語", "title": "リベンジ" }
+    ]
+  },
+  {
+    "year": 2000,
+    "events": [
+      { "category": "ニュース", "title": "二千円紙幣が発行" },
+      { "category": "スポーツ", "title": "シドニー五輪、高橋尚子がマラソンで金メダル" },
+      { "category": "音楽", "title": "サザンオールスターズ「TSUNAMI」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=サザンオールスターズ+TSUNAMI" },
+      { "category": "ゲーム", "title": "ソニー「PlayStation 2」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/PS2-Fat-Console-wDualShock2.jpg/320px-PS2-Fat-Console-wDualShock2.jpg" },
+      { "category": "流行語", "title": "おっはー" }
+    ]
+  },
+  {
+    "year": 2001,
+    "events": [
+      { "category": "ニュース", "title": "アメリカ同時多発テロ事件" },
+      { "category": "ニュース", "title": "ユニバーサル・スタジオ・ジャパン開業" },
+      { "category": "音楽", "title": "宇多田ヒカル「Can You Keep A Secret?」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=宇多田ヒカル+Can+You+Keep+A+Secret?" },
+      { "category": "映画", "title": "スタジオジブリ「千と千尋の神隠し」公開", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Spirited_Away_Japanese_poster.png/220px-Spirited_Away_Japanese_poster.png" },
+      { "category": "ゲーム", "title": "任天堂「ゲームボーイアドバンス」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Nintendo-Game-Boy-Advance-Purple-FL.jpg/320px-Nintendo-Game-Boy-Advance-Purple-FL.jpg" },
+      { "category": "スポーツ", "title": "イチローがMLBで首位打者・盗塁王・MVP" }
+    ]
+  },
+  {
+    "year": 2002,
+    "events": [
+      { "category": "スポーツ", "title": "FIFAワールドカップが日韓で共催" },
+      { "category": "音楽", "title": "浜崎あゆみ「H」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=浜崎あゆみ+H" },
+      { "category": "ゲーム", "title": "スクウェア「キングダム ハーツ」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Kingdom_Hearts_Box_Art.jpg/220px-Kingdom_Hearts_Box_Art.jpg" },
+      { "category": "流行語", "title": "タマちゃん" }
+    ]
+  },
+  {
     "year": 2003,
     "events": [
       { "category": "スポーツ", "title": "阪神タイガース、18年ぶりリーグ優勝" },
