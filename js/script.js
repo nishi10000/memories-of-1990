@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const timeline = document.getElementById('timeline');
   const yearNav = document.getElementById('year-nav');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.querySelector('.lightbox-close');
 
   const categoryClassMap = {
     'ニュース': 'news',
@@ -22,6 +25,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return `(${age}歳${gradeString})`;
   }
+
+  // ライトボックスを開く
+  const openLightbox = (imageUrl) => {
+    lightboxImg.src = imageUrl;
+    lightbox.classList.add('show');
+  };
+
+  // ライトボックスを閉じる
+  const closeLightbox = () => {
+    lightbox.classList.remove('show');
+  };
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+  lightboxClose.addEventListener('click', closeLightbox);
+
 
   // 文字化け対策を強化したデータ取得処理
   fetch('data/data.json')
@@ -96,17 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
             eventItem.appendChild(youtubeLink);
           }
 
+          // 画像アイコンを追加
           if (eventData.imageUrl) {
-            eventItem.addEventListener('mouseenter', () => {
-              const yearContent = eventItem.closest('.year-content');
-              yearContent.style.backgroundImage = `url(${eventData.imageUrl})`;
-              yearContent.classList.add('has-bg-image');
+            const imageIcon = document.createElement('span');
+            imageIcon.className = 'image-icon';
+            imageIcon.innerHTML = '📷';
+            imageIcon.addEventListener('click', () => {
+              openLightbox(eventData.imageUrl);
             });
-            eventItem.addEventListener('mouseleave', () => {
-              const yearContent = eventItem.closest('.year-content');
-              yearContent.style.backgroundImage = 'none';
-              yearContent.classList.remove('has-bg-image');
-            });
+            eventItem.appendChild(imageIcon);
           }
           eventList.appendChild(eventItem);
         });

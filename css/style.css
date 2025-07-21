@@ -367,3 +367,51 @@ main {
 .memory-form button:hover {
   background-color: #a3760a;
 }
+
+/* --- ライトボックス --- */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none; /* 通常は非表示 */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.lightbox-overlay.show {
+  display: flex; /* 表示するとき */
+}
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.lightbox-close:hover {
+  color: #ccc;
+}
+
+/* --- 画像表示アイコン --- */
+.image-icon {
+  cursor: pointer;
+  margin-left: 0.25rem;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+.image-icon:hover {
+  transform: scale(1.2);
+}
