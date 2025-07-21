@@ -85,6 +85,17 @@ document.addEventListener('DOMContentLoaded', () => {
           titleLink.rel = 'noopener noreferrer';
           eventItem.appendChild(titleLink);
 
+          // YouTubeリンクを追加
+          if (eventData.youtubeUrl) {
+            const youtubeLink = document.createElement('a');
+            youtubeLink.href = eventData.youtubeUrl;
+            youtubeLink.target = '_blank';
+            youtubeLink.rel = 'noopener noreferrer';
+            youtubeLink.className = 'youtube-link';
+            youtubeLink.innerHTML = '▶'; // 再生アイコン
+            eventItem.appendChild(youtubeLink);
+          }
+
           if (eventData.imageUrl) {
             eventItem.addEventListener('mouseenter', () => {
               const yearContent = eventItem.closest('.year-content');
