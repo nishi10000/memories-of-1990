@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'エンタメ': 'entertainment',
     'ゲーム': 'game',
     '流行・ファッション': 'fashion',
-    'テクノロジー': 'tech'
+    'テクノロジー': 'tech',
+    '流行語': 'buzzword',
+    '映画': 'movie',
+    'スポーツ': 'sports'
   };
 
   function getAgeAndGrade(year) {

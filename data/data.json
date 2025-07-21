@@ -6,7 +6,9 @@
       { "category": "ニュース", "title": "東西ドイツ統一" },
       { "category": "音楽", "title": "B.B.クィーンズ「おどるポンポコリン」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=B.B.クィーンズ+おどるポンポコリン" },
       { "category": "エンタメ", "title": "アニメ「ちびまる子ちゃん」放送開始", "imageUrl": "https://placehold.jp/400x300.png?text=Maruko" },
-      { "category": "ゲーム", "title": "任天堂「スーパーファミコン」発売", "imageUrl": "https://placehold.jp/400x300.png?text=SFC" }
+      { "category": "ゲーム", "title": "任天堂「スーパーファミコン」発売", "imageUrl": "https://placehold.jp/400x300.png?text=SFC" },
+      { "category": "映画", "title": "「プリティ・ウーマン」が大ヒット" },
+      { "category": "流行語", "title": "ファジー" }
     ]
   },
   {
@@ -16,7 +18,8 @@
       { "category": "ニュース", "title": "ソビエト連邦の崩壊" },
       { "category": "音楽", "title": "CHAGE&ASKA「SAY YES」が大ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=CHAGE&ASKA+SAY+YES" },
       { "category": "エンタメ", "title": "ドラマ「東京ラブストーリー」放送" },
-      { "category": "ゲーム", "title": "スクウェア「ファイナルファンタジーIV」発売" }
+      { "category": "ゲーム", "title": "スクウェア「ファイナルファンタジーIV」発売" },
+      { "category": "流行語", "title": "～じゃあーりませんか" }
     ]
   },
   {
@@ -25,7 +28,9 @@
       { "category": "ニュース", "title": "毛利衛さん、宇宙へ" },
       { "category": "音楽", "title": "米米CLUB「君がいるだけで」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=米米CLUB+君がいるだけで" },
       { "category": "エンタメ", "title": "アニメ「美少女戦士セーラームーン」放送開始" },
-      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストV 天空の花嫁」発売" }
+      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストV 天空の花嫁」発売" },
+      { "category": "映画", "title": "スタジオジブリ「紅の豚」公開" },
+      { "category": "スポーツ", "title": "バルセロナ五輪、岩崎恭子が金メダル" }
     ]
   },
   {
@@ -34,7 +39,8 @@
       { "category": "ニュース", "title": "Jリーグ開幕" },
       { "category": "音楽", "title": "CHAGE and ASKA「YAH YAH YAH」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=CHAGE+and+ASKA+YAH+YAH+YAH" },
       { "category": "エンタメ", "title": "映画「ジュラシック・パーク」公開" },
-      { "category": "ゲーム", "title": "スクウェア「聖剣伝説2」発売" }
+      { "category": "ゲーム", "title": "スクウェア「聖剣伝説2」発売" },
+      { "category": "スポーツ", "title": "サッカーW杯アジア最終予選「ドーハの悲劇」" }
     ]
   },
   {
@@ -43,7 +49,8 @@
       { "category": "ニュース", "title": "松本サリン事件発生" },
       { "category": "音楽", "title": "Mr.Children「innocent world」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=Mr.Children+innocent+world" },
       { "category": "エンタメ", "title": "ドラマ「家なき子」が大ヒット" },
-      { "category": "ゲーム", "title": "ソニー「PlayStation」発売" }
+      { "category": "ゲーム", "title": "ソニー「PlayStation」発売" },
+      { "category": "流行語", "title": "同情するならカネをくれ" }
     ]
   },
   {
@@ -52,30 +59,34 @@
       { "category": "ニュース", "title": "阪神・淡路大震災発生" },
       { "category": "音楽", "title": "DREAMS COME TRUE「LOVE LOVE LOVE」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=DREAMS+COME+TRUE+LOVE+LOVE+LOVE" },
       { "category": "エンタメ", "title": "アニメ「新世紀エヴァンゲリオン」放送開始" },
-      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストVI 幻の大地」発売" }
+      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストVI 幻の大地」発売" },
+      { "category": "テクノロジー", "title": "Microsoft「Windows 95」発売" },
+      { "category": "流行語", "title": "無党派" }
     ]
   },
   {
     "year": 2003,
     "events": [
-      { "category": "ニュース", "title": "阪神タイガース、18年ぶりリーグ優勝" },
+      { "category": "スポーツ", "title": "阪神タイガース、18年ぶりリーグ優勝" },
       { "category": "ニュース", "title": "六本木ヒルズ開業" },
       { "category": "音楽", "title": "SMAP「世界に一つだけの花」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=SMAP+世界に一つだけの花" },
       { "category": "音楽", "title": "森山直太朗「さくら（独唱）」が大ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=森山直太朗+さくら（独唱）" },
       { "category": "流行・ファッション", "title": "ヒップハングデニムが大流行" },
       { "category": "テクノロジー", "title": "ブロードバンド回線が普及し始める" },
       { "category": "ゲーム", "title": "「ポケットモンスター ルビー・サファイア」発売" },
-      { "category": "ゲーム", "title": "「ファイナルファンタジーX-2」発売" }
+      { "category": "ゲーム", "title": "「ファイナルファンタジーX-2」発売" },
+      { "category": "流行語", "title": "なんでだろう～" }
     ]
   },
   {
     "year": 2004,
     "events": [
-      { "category": "ニュース", "title": "アテネオリンピック開催、北島康介「チョー気持ちいい」" },
+      { "category": "スポーツ", "title": "アテネ五輪、北島康介「チョー気持ちいい」" },
       { "category": "ニュース", "title": "プロ野球再編問題、楽天イーグルス誕生" },
       { "category": "音楽", "title": "平井堅「瞳をとじて」が大ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=平井堅+瞳をとじて" },
       { "category": "音楽", "title": "ORANGE RANGE「花」が大ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=ORANGE+RANGE+花" },
       { "category": "エンタメ", "title": "ドラマ「冬のソナタ」が大ヒット、韓流ブーム" },
+      { "category": "映画", "title": "「世界の中心で、愛をさけぶ」公開" },
       { "category": "流行・ファッション", "title": "腰パン、UネックTシャツが流行" },
       { "category": "テクノロジー", "title": "Apple「iPod」が大ヒット" },
       { "category": "テクノロジー", "title": "「ニンテンドーDS」「PSP」発売" },
@@ -100,7 +111,8 @@
       { "category": "ニュース", "title": "つくばエクスプレス開業" },
       { "category": "エンタメ", "title": "ドラマ「女王の教室」放送" },
       { "category": "エンタメ", "title": "ドラマ「野ブタ。をプロデュース」放送" },
-      { "category": "エンタメ", "title": "ドラマ「ドラゴン桜」放送" }
+      { "category": "エンタメ", "title": "ドラマ「ドラゴン桜」放送" },
+      { "category": "流行語", "title": "小泉劇場" }
     ]
   }
 ]

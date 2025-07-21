@@ -217,6 +217,9 @@ main {
 .event-item.category-game .event-category-tag { background-color: #4682b4; } /* SteelBlue */
 .event-item.category-fashion .event-category-tag { background-color: #8fbc8f; } /* DarkSeaGreen */
 .event-item.category-tech .event-category-tag { background-color: #a0522d; } /* Sienna */
+.event-item.category-buzzword .event-category-tag { background-color: #db7093; } /* PaleVioletRed */
+.event-item.category-movie .event-category-tag { background-color: #4169e1; } /* RoyalBlue */
+.event-item.category-sports .event-category-tag { background-color: #3cb371; } /* MediumSeaGreen */
 .event-item.category-default .event-category-tag { background-color: #708090; } /* SlateGray */
 
 .title {
