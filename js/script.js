@@ -59,17 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
         yearTitle.innerHTML = `${yearData.year}年 <small class="personal-info">${personalInfo}</small>`;
         yearContent.appendChild(yearTitle);
 
-        // イベントをカテゴリ分けせず、JSONの順序で直接リスト表示
+        // アコーディオンのラッパーを追加
+        const accordionContent = document.createElement('div');
+        accordionContent.className = 'accordion-content';
+        
+        // イベントリストをアコーディオン内に移動
         const eventList = document.createElement('ul');
         eventList.className = 'event-list';
 
         yearData.events.forEach(eventData => {
           const eventItem = document.createElement('li');
-          // カテゴリ情報をクラスとして付与
           const categoryClassName = categoryClassMap[eventData.category] || 'default';
           eventItem.className = `event-item category-${categoryClassName}`;
 
-          // カテゴリ名をタグとして表示
           const categoryTag = document.createElement('span');
           categoryTag.className = 'event-category-tag';
           categoryTag.textContent = eventData.category;
@@ -81,17 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
           titleLink.href = `https://ja.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(eventData.title)}`;
           titleLink.target = '_blank';
           titleLink.rel = 'noopener noreferrer';
-
           eventItem.appendChild(titleLink);
 
-          // 背景画像用のイベントリスナーを追加
           if (eventData.imageUrl) {
             eventItem.addEventListener('mouseenter', () => {
               const yearContent = eventItem.closest('.year-content');
               yearContent.style.backgroundImage = `url(${eventData.imageUrl})`;
               yearContent.classList.add('has-bg-image');
             });
-
             eventItem.addEventListener('mouseleave', () => {
               const yearContent = eventItem.closest('.year-content');
               yearContent.style.backgroundImage = 'none';
@@ -101,11 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
           eventList.appendChild(eventItem);
         });
 
-        yearContent.appendChild(eventList);
+        accordionContent.appendChild(eventList);
 
         // --- ▼▼▼ 思い出投稿機能 ▼▼▼ ---
-
-        // 1. 思い出表示エリアを作成
         const memorySection = document.createElement('div');
         memorySection.className = 'memory-section';
         const memoryTitle = document.createElement('h4');
@@ -115,29 +112,33 @@ document.addEventListener('DOMContentLoaded', () => {
         memoryList.className = 'memory-list';
         memorySection.appendChild(memoryTitle);
         memorySection.appendChild(memoryList);
-        yearContent.appendChild(memorySection);
+        accordionContent.appendChild(memorySection);
 
-        // 2. 投稿フォームを作成
         const memoryForm = document.createElement('form');
         memoryForm.className = 'memory-form';
-        memoryForm.style.display = 'none'; // 最初は非表示
+        memoryForm.style.display = 'none';
         memoryForm.innerHTML = `
           <input type="text" class="memory-nickname" placeholder="ニックネーム" required>
           <textarea class="memory-comment" placeholder="あの頃の思い出をどうぞ..." required></textarea>
           <button type="submit">投稿する</button>
         `;
-        yearContent.appendChild(memoryForm);
+        accordionContent.appendChild(memoryForm);
 
-        // 3. 「思い出を投稿」ボタンを作成
         const addMemoryBtn = document.createElement('button');
         addMemoryBtn.className = 'add-memory-btn';
         addMemoryBtn.textContent = '＋ 思い出を投稿する';
         addMemoryBtn.addEventListener('click', () => {
           memoryForm.style.display = memoryForm.style.display === 'none' ? 'block' : 'none';
         });
-        yearContent.appendChild(addMemoryBtn);
+        accordionContent.appendChild(addMemoryBtn);
+        
+        yearContent.appendChild(accordionContent);
 
-        // 4. localStorageから思い出を読み込んで表示する関数
+        // クリックイベントでアコーディオンを開閉
+        yearTitle.addEventListener('click', () => {
+          yearContent.classList.toggle('open');
+        });
+
         const loadMemories = (year, listElement) => {
           const memories = JSON.parse(localStorage.getItem(`memories_${year}`) || '[]');
           listElement.innerHTML = '';
@@ -149,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         };
 
-        // 5. フォーム送信時の処理
         memoryForm.addEventListener('submit', (e) => {
           e.preventDefault();
           const nicknameInput = memoryForm.querySelector('.memory-nickname');
@@ -158,22 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
             nickname: nicknameInput.value,
             comment: commentInput.value
           };
-
-          // localStorageに保存
           const memories = JSON.parse(localStorage.getItem(`memories_${yearData.year}`) || '[]');
           memories.push(newMemory);
           localStorage.setItem(`memories_${yearData.year}`, JSON.stringify(memories));
-
-          // 表示を更新
           loadMemories(yearData.year, memoryList);
-
-          // フォームをリセットして非表示に
           nicknameInput.value = '';
           commentInput.value = '';
           memoryForm.style.display = 'none';
         });
 
-        // 初期表示
         loadMemories(yearData.year, memoryList);
 
         // --- ▲▲▲ 思い出投稿機能 ▲▲▲ ---
@@ -181,6 +174,12 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSection.appendChild(yearContent);
         timeline.appendChild(yearSection);
       });
+
+      // 初期状態で最初の年だけ開く
+      const firstYearContent = document.querySelector('.year-content');
+      if (firstYearContent) {
+        firstYearContent.classList.add('open');
+      }
 
       document.querySelectorAll('#year-nav a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

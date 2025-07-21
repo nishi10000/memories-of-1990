@@ -150,6 +150,37 @@ main {
   color: #8c7853;
   border-bottom: 2px solid #e9e4d9;
   padding-bottom: 0.5rem;
+  cursor: pointer; /* クリック可能を示すカーソル */
+  position: relative; /* 矢印アイコンの位置基準 */
+}
+
+/* アコーディオンの矢印 */
+.year-content h2::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.4s ease;
+  font-size: 0.8rem;
+  color: #8c7853;
+}
+.year-content.open h2::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* アコーディオンのコンテンツ��リア */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  padding: 0 0.5rem; /* 閉じた状態ではパディングなし */
+}
+
+.year-content.open .accordion-content {
+  max-height: 1000px; /* 十分な高さを確保 */
+  padding: 1rem 0.5rem; /* 開いた状態のパディング */
+  transition: max-height 0.5s ease-in, padding 0.5s ease-in;
 }
 
 .event-list {
