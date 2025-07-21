@@ -3,10 +3,10 @@
     "year": 1990,
     "events": [
       { "category": "ニュース", "title": "大学入試センター試験開始" },
-      { "category": "ニュース", "title": "東西ドイツ統一" },
+      { "category": "ニュース", "title": "東西ドイツ統一", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Brandenburger_Tor_abends.jpg" },
       { "category": "音楽", "title": "B.B.クィーンズ「おどるポンポコリン」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=B.B.クィーンズ+おどるポンポコリン" },
-      { "category": "エンタメ", "title": "アニメ「ちびまる子ちゃん」放送開始", "imageUrl": "https://placehold.jp/400x300.png?text=Maruko" },
-      { "category": "ゲーム", "title": "任天堂「スーパーファミコン」発売", "imageUrl": "https://placehold.jp/400x300.png?text=SFC" },
+      { "category": "エンタメ", "title": "アニメ「ちびまる子ちゃん」放送開始", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Chibi_Maruko-chan_logo.svg/320px-Chibi_Maruko-chan_logo.svg.png" },
+      { "category": "ゲーム", "title": "任天堂「スーパーファミコン」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/SNES-Mod1-Console-Set.jpg/320px-SNES-Mod1-Console-Set.jpg" },
       { "category": "映画", "title": "「プリティ・ウーマン」が大ヒット" },
       { "category": "流行語", "title": "ファジー" }
     ]
@@ -18,7 +18,7 @@
       { "category": "ニュース", "title": "ソビエト連邦の崩壊" },
       { "category": "音楽", "title": "CHAGE&ASKA「SAY YES」が大ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=CHAGE&ASKA+SAY+YES" },
       { "category": "エンタメ", "title": "ドラマ「東京ラブストーリー」放送" },
-      { "category": "ゲーム", "title": "スクウェア「ファイナルファンタジーIV」発売" },
+      { "category": "ゲーム", "title": "スクウェア「ファイナルファンタジーIV」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Final_Fantasy_IV_box_art.jpg/220px-Final_Fantasy_IV_box_art.jpg" },
       { "category": "流行語", "title": "～じゃあーりませんか" }
     ]
   },
@@ -27,19 +27,19 @@
     "events": [
       { "category": "ニュース", "title": "毛利衛さん、宇宙へ" },
       { "category": "音楽", "title": "米米CLUB「君がいるだけで」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=米米CLUB+君がいるだけで" },
-      { "category": "エンタメ", "title": "アニメ「美少女戦士セーラームーン」放送開始" },
-      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストV 天空の花嫁」発売" },
-      { "category": "映画", "title": "スタジオジブリ「紅の豚」公開" },
+      { "category": "エンタメ", "title": "アニメ「美少女戦士セーラームーン」放送開始", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Sailor_Moon_logo.svg/320px-Sailor_Moon_logo.svg.png" },
+      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストV 天空の花嫁」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Dragon_Quest_V_box.jpg/220px-Dragon_Quest_V_box.jpg" },
+      { "category": "映画", "title": "スタジオジブリ「紅の豚」公開", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Porco_Rosso_Poster.jpg/220px-Porco_Rosso_Poster.jpg" },
       { "category": "スポーツ", "title": "バルセロナ五輪、岩崎恭子が金メダル" }
     ]
   },
   {
     "year": 1993,
     "events": [
-      { "category": "ニュース", "title": "Jリーグ開幕" },
+      { "category": "ニュース", "title": "Jリーグ開幕", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/J-League_logo.svg/200px-J-League_logo.svg.png" },
       { "category": "音楽", "title": "CHAGE and ASKA「YAH YAH YAH」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=CHAGE+and+ASKA+YAH+YAH+YAH" },
-      { "category": "エンタメ", "title": "映画「ジュラシック・パーク」公開" },
-      { "category": "ゲーム", "title": "スクウェア「聖剣伝説2」発売" },
+      { "category": "エンタメ", "title": "映画「ジュラシック・パーク」公開", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Jurassic_Park_poster.jpg/220px-Jurassic_Park_poster.jpg" },
+      { "category": "ゲーム", "title": "スクウェア「聖剣伝説2」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Secret_of_Mana_cover.jpg/220px-Secret_of_Mana_cover.jpg" },
       { "category": "スポーツ", "title": "サッカーW杯アジア最終予選「ドーハの悲劇」" }
     ]
   },
@@ -49,7 +49,7 @@
       { "category": "ニュース", "title": "松本サリン事件発生" },
       { "category": "音楽", "title": "Mr.Children「innocent world」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=Mr.Children+innocent+world" },
       { "category": "エンタメ", "title": "ドラマ「家なき子」が大ヒット" },
-      { "category": "ゲーム", "title": "ソニー「PlayStation」発売" },
+      { "category": "ゲーム", "title": "ソニー「PlayStation」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/PlayStation-Original-wController-L.jpg/320px-PlayStation-Original-wController-L.jpg" },
       { "category": "流行語", "title": "同情するならカネをくれ" }
     ]
   },
@@ -58,9 +58,9 @@
     "events": [
       { "category": "ニュース", "title": "阪神・淡路大震災発生" },
       { "category": "音楽", "title": "DREAMS COME TRUE「LOVE LOVE LOVE」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=DREAMS+COME+TRUE+LOVE+LOVE+LOVE" },
-      { "category": "エンタメ", "title": "アニメ「新世紀エヴァンゲリオン」放送開始" },
-      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストVI 幻の大地」発売" },
-      { "category": "テクノロジー", "title": "Microsoft「Windows 95」発売" },
+      { "category": "エンタメ", "title": "アニメ「新世紀エヴァンゲリオン」放送開始", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Neon_Genesis_Evangelion_logo.svg/320px-Neon_Genesis_Evangelion_logo.svg.png" },
+      { "category": "ゲーム", "title": "エニックス「ドラゴンクエストVI 幻の大地」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Dragon_Quest_VI_box.jpg/220px-Dragon_Quest_VI_box.jpg" },
+      { "category": "テクノロジー", "title": "Microsoft「Windows 95」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Windows_95_box.jpg/220px-Windows_95_box.jpg" },
       { "category": "流行語", "title": "無党派" }
     ]
   },
@@ -68,13 +68,13 @@
     "year": 2003,
     "events": [
       { "category": "スポーツ", "title": "阪神タイガース、18年ぶりリーグ優勝" },
-      { "category": "ニュース", "title": "六本木ヒルズ開業" },
+      { "category": "ニュース", "title": "六本木ヒルズ開業", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Roppongi_Hills_201204.jpg/320px-Roppongi_Hills_201204.jpg" },
       { "category": "音楽", "title": "SMAP「世界に一つだけの花」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=SMAP+世界に一つだけの花" },
       { "category": "音楽", "title": "森山直太朗「さくら（独唱）」が大ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=森山直太朗+さくら（独唱）" },
       { "category": "流行・ファッション", "title": "ヒップハングデニムが大流行" },
       { "category": "テクノロジー", "title": "ブロードバンド回線が普及し始める" },
-      { "category": "ゲーム", "title": "「ポケットモンスター ルビー・サファイア」発売" },
-      { "category": "ゲーム", "title": "「ファイナルファンタジーX-2」発売" },
+      { "category": "ゲーム", "title": "「ポケットモンスター ルビー・サファイア」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Ruby_Sapphire_boxart.jpg/220px-Ruby_Sapphire_boxart.jpg" },
+      { "category": "ゲーム", "title": "「ファイナルファンタジーX-2」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5A/Ffx-2box.jpg/220px-Ffx-2box.jpg" },
       { "category": "流行語", "title": "なんでだろう～" }
     ]
   },
@@ -88,16 +88,16 @@
       { "category": "エンタメ", "title": "ドラマ「冬のソナタ」が大ヒット、韓流ブーム" },
       { "category": "映画", "title": "「世界の中心で、愛をさけぶ」公開" },
       { "category": "流行・ファッション", "title": "腰パン、UネックTシャツが流行" },
-      { "category": "テクノロジー", "title": "Apple「iPod」が大ヒット" },
-      { "category": "テクノロジー", "title": "「ニンテンドーDS」「PSP」発売" },
-      { "category": "ゲーム", "title": "「ドラゴンクエストVIII」発売" },
-      { "category": "ゲーム", "title": "「モンスターハンター」発売" }
+      { "category": "テクノロジー", "title": "Apple「iPod」が大ヒット", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/IPod_4th_gen.jpg/200px-IPod_4th_gen.jpg" },
+      { "category": "テクノロジー", "title": "「ニンテンドーDS」「PSP」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Nintendo-DS-Fat-Blue.png/200px-Nintendo-DS-Fat-Blue.png" },
+      { "category": "ゲーム", "title": "「ドラゴンクエストVIII」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Dragon_Quest_VIII_box.jpg/220px-Dragon_Quest_VIII_box.jpg" },
+      { "category": "ゲーム", "title": "「モンスターハンター」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Monster_Hunter_Cover.jpg/220px-Monster_Hunter_Cover.jpg" }
     ]
   },
   {
     "year": 2005,
     "events": [
-      { "category": "ニュース", "title": "愛・地球博（愛知万博）開催" },
+      { "category": "ニュース", "title": "愛・地球博（愛知万博）開催", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Expo_2005_Global_House.jpg/320px-Expo_2005_Global_House.jpg" },
       { "category": "ニュース", "title": "JR福知山線脱線事故" },
       { "category": "音楽", "title": "修二と彰「青春アミーゴ」が年間1位", "youtubeUrl": "https://www.youtube.com/results?search_query=修二と彰+青春アミーゴ" },
       { "category": "音楽", "title": "ケツメイシ「さくら」が大ヒット", "youtubeUrl": "https://www.youtube.com/results?search_query=ケツメイシ+さくら" },
@@ -105,8 +105,8 @@
       { "category": "流行・ファッション", "title": "「クールビズ」開始" },
       { "category": "流行・ファッション", "title": "東京ガールズコレクション初開催" },
       { "category": "テクノロジー", "title": "「おサイフケータイ」サービス開始" },
-      { "category": "テクノロジー", "title": "Apple「iPod nano」発売" },
-      { "category": "ゲーム", "title": "「おいでよ どうぶつの森」発売" },
+      { "category": "テクノロジー", "title": "Apple「iPod nano」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/IPod_nano_1G.png/200px-IPod_nano_1G.png" },
+      { "category": "ゲーム", "title": "「おいでよ どうぶつの森」発売", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Oideyo_Doubutsu_no_Mori_box.jpg/220px-Oideyo_Doubutsu_no_Mori_box.jpg" },
       { "category": "ニュース", "title": "知床半島が世界自然遺産に登録" },
       { "category": "ニュース", "title": "つくばエクスプレス開業" },
       { "category": "エンタメ", "title": "ドラマ「女王の教室」放送" },
