@@ -147,23 +147,6 @@ main {
   color: #1877f2;
 }
 
-.category-group {
-  margin-top: 1.5rem;
-}
-.category-group:first-of-type {
-  margin-top: 1rem;
-}
-
-.category-title {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  color: #fff;
-  margin-bottom: 0.8rem;
-}
-
 .event-list {
   list-style: none;
   padding: 0;
@@ -199,13 +182,6 @@ main {
 .event-item.category-fashion .event-category-tag { background-color: #f43f5e; }
 .event-item.category-tech .event-category-tag { background-color: #3b82f6; }
 .event-item.category-default .event-category-tag { background-color: #65676b; }
-
-.category-news { background-color: #1877f2; }
-.category-music { background-color: #1db954; } /* Spotify Green */
-.category-entertainment { background-color: #ffc107; } /* Amber */
-.category-game { background-color: #7289da; } /* Discord Purple */
-.category-fashion { background-color: #f43f5e; } /* Rose 500 */
-.category-tech { background-color: #3b82f6; } /* Blue 500 */
 
 .title {
   color: #1c1e21;
@@ -261,4 +237,50 @@ main {
   }
 }
 
+/* --- ライトボックス --- */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none; /* 通常は非表示 */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.lightbox-overlay.show {
+  display: flex; /* 表示するとき */
+}
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.lightbox-close:hover {
+  color: #ccc;
+}
 
+/* --- 画像表示アイコン --- */
+.image-icon {
+  cursor: pointer;
+  margin-left: 0.25rem;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+.image-icon:hover {
+  transform: scale(1.2);
+}
