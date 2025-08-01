@@ -1,9 +1,5 @@
 # TODO
 
-- [x] Resolve git conflicts in the following files:
-  - [x] `css/style.css`
-  - [x] `index.html`
-  - [x] `js/script.js`
-- [x] Verify the application still works after conflict resolution.
-- [x] ドロップダウンの表示を消す
-- [x] YouTubeで音楽は不要
+- [ ] 画像の遅延読み込み (Lazy Loading)
+- [x] コードのリファクタリング:
+  - `js/script.js`が長くなってきたため、データ取得、UI生成、イベントリスナーなどの役割ごとにコードを整理し、可読性とメンテナンス性を向上させる。
